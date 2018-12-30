@@ -4,12 +4,13 @@
 #include <math.h>
 
 int main() {
-	double i, num=600851475143;
+	double num=600851475143;
+	int i;
 	for(i=2;i<=num;i++) {
-//		if(num%i==0) {
+		if(fmod(num, i)==0) {
 			printf("%d",i);
 			num=num/i;
-			printf("---->%d\n",num);
+			printf("---->%f\n",num);
 			i=2;
 		}
 	}
